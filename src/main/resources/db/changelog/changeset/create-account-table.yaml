@@ -1,0 +1,56 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-users
+      author: Andrey
+
+      changes:
+        - createTable:
+            tableName: account
+            columns:
+              - column:
+                  name: id
+                  autoIncrement: true
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: account_name
+                  type: VARCHAR(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: VARCHAR(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: amountMoney
+                  type: DECIMAL
+                  constraints:
+                  nullable: false
+              - column:
+                  name: currency
+                  type: VARCHAR(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created
+                  type: DATA
+                  constraints:
+                    nullable: false
+              - column:
+                  name: changed
+                  type: DATA
+                  constraints:
+                    nullable: false
+              - column:
+                  name: data_transaction
+                  type: DATA
+                  constraints:
+                    nullable: false
